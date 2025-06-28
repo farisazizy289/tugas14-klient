@@ -1,11 +1,11 @@
-import Button from './button'; // Sesuaikan path
-import Input from './Input'; // Sesuaikan path
-import Label from './Label'; // Sesuaikan path
+import Button from "./button"; // Sesuaikan path
+import Input from "./input"; // Sesuaikan path
+import Label from "./Label"; // Sesuaikan path
 
 const FormRegister = ({ onSubmit, form, handleChange }) => {
   return (
     <form id="loginform" onSubmit={onSubmit} className="space-y-4">
-        <div>
+      <div>
         <Label
           forLabel="name"
           classname="block text-sm font-medium text-gray-700"
@@ -44,10 +44,10 @@ const FormRegister = ({ onSubmit, form, handleChange }) => {
           name="password"
           placeholder="Masukkan Password Kamu"
           value={form.password}
-           onChange={handleChange}
+          onChange={handleChange}
         />
       </div>
-      
+
       <Button type="submit" tulisanButton="Register" />
     </form>
   );
