@@ -1,17 +1,17 @@
 // import Form from "/Admin/Components/Form";
 import Label from "@/Pages/Admin/Components/Label";
-import Input from "@/Pages/Admin/Components/Input";
+import Input from "@/Pages/Admin/Components/input";
 import Button from "@/Pages/Admin/Components/Button";
 import Form from "./Admin/Components/Form";
 
 const RencanaStudiModal = ({
-    isOpen,
-    onClose,
-    onSubmit,
-    onChange,
-    form,
-    dosen,
-    mataKuliah
+  isOpen,
+  onClose,
+  onSubmit,
+  onChange,
+  form,
+  dosen,
+  mataKuliah,
 }) => {
   if (!isOpen) return null;
 
@@ -20,7 +20,10 @@ const RencanaStudiModal = ({
       <div className="bg-white rounded-lg shadow-lg w-full max-w-md">
         <div className="flex justify-between items-center p-4 border-b">
           <h2 className="text-lg font-semibold">Tambah Kelas Baru</h2>
-          <button onClick={onClose} className="text-gray-600 hover:text-red-500 text-xl">
+          <button
+            onClick={onClose}
+            className="text-gray-600 hover:text-red-500 text-xl"
+          >
             &times;
           </button>
         </div>
@@ -37,7 +40,9 @@ const RencanaStudiModal = ({
             >
               <option value="">-- Pilih --</option>
               {mataKuliah.map((m) => (
-                <option key={m.id} value={m.id}>{m.name}</option>
+                <option key={m.id} value={m.id}>
+                  {m.name}
+                </option>
               ))}
             </select>
           </div>
@@ -52,7 +57,9 @@ const RencanaStudiModal = ({
             >
               <option value="">-- Pilih --</option>
               {dosen.map((d) => (
-                <option key={d.id} value={d.id}>{d.nama}</option>
+                <option key={d.id} value={d.id}>
+                  {d.nama}
+                </option>
               ))}
             </select>
           </div>
